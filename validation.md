@@ -11,7 +11,7 @@ Adding a record:
 use Illuminate\Validation\Rule;
 use Smake\Common\Http\Requests\Request;
 
-class AddRequest extends Request
+class AddUserRequest extends Request
 {
     public function rules()
     {
@@ -33,7 +33,7 @@ Update an existing record:
 use Illuminate\Validation\Rule;
 use Smake\Common\Http\Requests\Request;
 
-class UpdateRequest extends Request
+class EditUserRequest extends Request
 {
     public function rules()
     {
@@ -42,8 +42,7 @@ class UpdateRequest extends Request
                 'required',
                 'email:strict',
                 'max:255',
-                Rule::unique('users', 'email')
-                    ->ignore($this->route('userId')),
+                Rule::unique('users', 'email')->ignore($this->route('userId')),
             ],
         ];
     }
