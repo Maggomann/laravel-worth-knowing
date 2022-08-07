@@ -1,4 +1,4 @@
-# Tipps
+# Tips
 
 Description follows
 
