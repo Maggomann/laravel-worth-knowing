@@ -1,10 +1,13 @@
 # Validation Tips
 
 - [Rule::unique](#ruleunique-with-ignore-method-on-update)
+- [prepareForValidation](#prepareForValidation)
+- [prepareForValidation](#prepareForValidation)
+
 
 ## Rule::unique with ignore method on update
 
-Adding a record:
+__Adding a record__:
 
 
 ```php
@@ -27,7 +30,7 @@ class AddUserRequest extends Request
 //...
 ```
 
-Update an existing record:
+__Update an existing record__:
 
 ```php
 use Illuminate\Validation\Rule;
@@ -50,3 +53,51 @@ class EditUserRequest extends Request
 //...
 ```
 
+## prepareForValidation
+
+```php
+use Illuminate\Validation\Rule;
+use Smake\Common\Http\Requests\Request;
+
+class EditUserRequest extends Request
+{
+    protected function prepareForValidation()
+    {
+        // do something before the data has been validated
+        // Example:
+        parent::prepareForValidation();
+
+        $this->merge([
+            'nickname' => $this->input('nickname', '') . ' with Love',
+        ]);
+    }
+
+//...
+```
+
+## passedValidation
+
+```php
+use Illuminate\Validation\Rule;
+use Smake\Common\Http\Requests\Request;
+
+class EditUserRequest extends Request
+{
+    protected function passedValidation()
+    {
+        // do something after the data has been validated
+        // Example:
+        $this->merge([
+            'nickname' => $this->input('nickname', '') . '❤️', 
+        ]);
+
+
+        // override the data for the request()->validated() method hack
+        $this->getValidatorInstance()->setData(
+            collect($this->input())
+                ->only(collect($this->rules()]->keys())
+                ->all()
+        );
+    }
+//...
+```
