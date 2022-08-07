@@ -2,7 +2,7 @@
 
 - [Rule::unique](#ruleunique-with-ignore-method-on-update)
 - [prepareForValidation](#prepareForValidation)
-- [prepareForValidation](#prepareForValidation)
+- [passedValidation](#passedValidation)
 
 
 ## Rule::unique with ignore method on update
