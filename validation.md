@@ -1,6 +1,6 @@
 # Validation Tips
 
-- [Rule::unique](#rule::unique-with-ignore-method-on-update)
+- [Rule::unique](#ruleunique-with-ignore-method-on-update)
 
 ## Rule::unique with ignore method on update
 
