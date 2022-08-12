@@ -2,7 +2,7 @@
 
 - [Original article by Mohamed Said](https://divinglaravel.com/when-does-php-call-__destruct)
 
-[Original article by Mohamed Said](#./expectException-and-expectExceptionMessage)
+[BAck to PHP tips](#./php.md#php-tips)
 
 In PHP,
 `__construct()

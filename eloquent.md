@@ -1,4 +1,4 @@
-# Validation Tips
+# Eloquent Tips
 
 - [Touch Eloquent Method](#touch-eloquent-method)
 
