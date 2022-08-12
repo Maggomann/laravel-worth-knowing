@@ -2,7 +2,7 @@
 
 - [Original article by Mohamed Said](https://divinglaravel.com/when-does-php-call-__destruct)
 
-[BAck to PHP tips](#./php.md#php-tips)
+[Back to PHP tips](../php.md#php-tips)
 
 In PHP,
 `__construct()
