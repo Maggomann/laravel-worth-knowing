@@ -4,6 +4,8 @@
 
 ## Throw an exception
 
+![Exception callback](./arr_helper/assets/arr_helper_callback.jpeg)
+
 ```php
 $config = ['.......'];
 $apiKey = Arr::get($config, 'api_key', fn () => throw new Exeption('your message here'));

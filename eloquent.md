@@ -4,6 +4,8 @@
 
 ## Touch eloquent method
 
+![git push +](./eloquent/assets/eloquent_update_timestamp.jpeg)
+
 ```php
 $user = User::find(1);
 
